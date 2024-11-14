@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test:
+  Maven test:
 
     runs-on: ubuntu-latest
 
