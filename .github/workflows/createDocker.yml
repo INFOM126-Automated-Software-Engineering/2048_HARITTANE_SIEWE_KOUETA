@@ -40,5 +40,3 @@ jobs:
       
       - name: Push Docker image
         run: docker push sasuke3/2048_ase:latest
-
-        docker build . --file Dockerfile --tag $DOCKER_USER/$REPO_NAME:${{ steps.date.outputs.date }}
