@@ -39,4 +39,4 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
       
       - name: Push Docker image
-        run: docker push 2048:latest
+        run: docker push sasuke3/2048_ase/2048:latest
