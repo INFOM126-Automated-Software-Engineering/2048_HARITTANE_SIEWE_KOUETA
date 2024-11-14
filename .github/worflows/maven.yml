@@ -19,4 +19,4 @@ jobs:
         cache: maven
     - name: Test 2048
       working-directory: ./
-      run: run mvn -B test
+      run: mvn -B test
