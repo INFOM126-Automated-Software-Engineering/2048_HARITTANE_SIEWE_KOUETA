@@ -9,8 +9,13 @@ RUN apt-get update && apt-get install -y \
     libxrender1 \
     libxtst6 \
     fonts-dejavu-core \
+    fonts-dejavu-extra \
+    fonts-liberation \
     --no-install-recommends && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Set environment variables to avoid font errors
+ENV JAVA_TOOL_OPTIONS="-Djava.awt.headless=false"
 
 # Set the working directory in the container
 WORKDIR /app
