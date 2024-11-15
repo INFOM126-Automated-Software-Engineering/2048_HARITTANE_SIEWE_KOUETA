@@ -1,6 +1,14 @@
 # Use an OpenJDK image as the base
 FROM openjdk:17-jdk-slim
 
+RUN apt-get update && apt-get install -y \
+    libx11-6 \
+    libxext6 \
+    libxrender1 \
+    libxtst6 \
+    libxi6 \
+    && rm -rf /var/lib/apt/lists/*
+
 # Set the working directory in the container
 WORKDIR /app
 
