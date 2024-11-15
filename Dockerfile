@@ -24,4 +24,5 @@ WORKDIR /app
 COPY target/*.jar app.jar
 
 # Run the application
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.jar"] \
+    ["tail", "-f", "/dev/null"]
