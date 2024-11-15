@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     libxext6 \
     libxrender1 \
     libxtst6 \
+    fonts-dejavu-core \
     --no-install-recommends && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
