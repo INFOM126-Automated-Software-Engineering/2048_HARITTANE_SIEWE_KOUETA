@@ -1,0 +1,15 @@
+# Use the full OpenJDK image as the base
+FROM openjdk:17-jdk
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the JAR file from the build output into the Docker image
+COPY target/*.jar app.jar
+
+# Set environment variables to ensure GUI compatibility
+ENV DISPLAY=host.docker.internal:0
+ENV JAVA_TOOL_OPTIONS="-Djava.awt.headless=false"
+
+# Run the application
+CMD ["java", "-jar", "app.jar"]
